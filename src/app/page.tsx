@@ -152,7 +152,7 @@ export default function CuttinEdgeYouth() {
               </CardHeader>
               <CardContent>
                 <blockquote className="text-base sm:text-lg text-gray-700 italic leading-relaxed mb-3">
-                  &ldquo;{verseOfDay.verse}&rdquo;
+                  {verseOfDay.verse}
                 </blockquote>
                 <cite className="text-sm sm:text-base font-semibold text-red-600">- {verseOfDay.reference}</cite>
               </CardContent>
