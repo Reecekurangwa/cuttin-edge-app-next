@@ -119,8 +119,8 @@ export default function CuttinEdgeYouth() {
             {/* Escaped the single quote */}
             <h1 className="text-3xl sm:text-5xl font-bold mb-2 tracking-tight">Cuttin&apos; Edge</h1>
             <p className="text-lg sm:text-xl text-red-100 font-medium">Youth Ministry</p>
-            {/* Escaped the double quotes */}
-            <p className="text-sm sm:text-base text-red-200 mt-2">&quot;Be strong and courageous!&quot; - Joshua 1:9</p>
+            {/* Using single quotes for the string to avoid the ESLint error */}
+            <p className="text-sm sm:text-base text-red-200 mt-2">'Be strong and courageous!' - Joshua 1:9</p>
             {/* Display the current time */}
             <p className="text-sm sm:text-base text-red-200 mt-2">{currentTime.toLocaleTimeString()}</p>
           </div>
@@ -134,8 +134,8 @@ export default function CuttinEdgeYouth() {
             <CardContent className="text-center py-8">
               <BookIcon className="w-8 h-8 mx-auto mb-3" />
               <h2 className="text-xl sm:text-2xl font-bold mb-2">Current Track</h2>
-              {/* Escaped the double quotes */}
-              <p className="text-lg sm:text-xl font-semibold">&quot;Understanding the Trinity&quot;</p>
+              {/* Using single quotes for the string to avoid the ESLint error */}
+              <p className="text-lg sm:text-xl font-semibold">'Understanding the Trinity'</p>
               <p className="text-sm sm:text-base opacity-90 mt-2">Week 3 of 6 • Exploring the Holy Spirit</p>
             </CardContent>
           </Card>
@@ -336,8 +336,8 @@ export default function CuttinEdgeYouth() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           {/* Escaped the single quote */}
           <p className="text-sm text-red-100">© 2024 Cuttin&apos; Edge Youth Ministry • Grace Community Church</p>
-          {/* Escaped the double quotes */}
-          <p className="text-xs text-red-200 mt-2">&quot;Train up a child in the way he should go&quot; - Proverbs 22:6</p>
+          {/* Using single quotes for the string to avoid the ESLint error */}
+          <p className="text-xs text-red-200 mt-2">'Train up a child in the way he should go' - Proverbs 22:6</p>
         </div>
       </footer>
     </div>
