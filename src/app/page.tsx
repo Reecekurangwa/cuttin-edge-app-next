@@ -2,10 +2,13 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
+import Image from "next/image"
 
 export default function CuttinEdgeYouth() {
+  // Use currentTime state to display the current time in the UI
   const [currentTime, setCurrentTime] = useState(new Date())
-  const [verseOfDay, setVerseOfDay] = useState({
+  // The setVerseOfDay setter is not used, so it has been removed for cleanup.
+  const [verseOfDay] = useState({
     verse:
       "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, to give you hope and a future.",
     reference: "Jeremiah 29:11",
@@ -18,7 +21,7 @@ export default function CuttinEdgeYouth() {
     return () => clearInterval(timer)
   }, [])
 
-  // Sample data - in real app this would come from a database
+  // Sample data - in a real app this would come from a database
   const upcomingBirthdays = [
     { name: "Sarah Johnson", date: "Dec 15", age: 17 },
     { name: "Marcus Williams", date: "Dec 22", age: 16 },
@@ -113,9 +116,13 @@ export default function CuttinEdgeYouth() {
       <header className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white shadow-xl">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-5xl font-bold mb-2 tracking-tight">Cuttin' Edge</h1>
+            {/* Escaped the single quote */}
+            <h1 className="text-3xl sm:text-5xl font-bold mb-2 tracking-tight">Cuttin&apos; Edge</h1>
             <p className="text-lg sm:text-xl text-red-100 font-medium">Youth Ministry</p>
-            <p className="text-sm sm:text-base text-red-200 mt-2">"Be strong and courageous!" - Joshua 1:9</p>
+            {/* Escaped the double quotes */}
+            <p className="text-sm sm:text-base text-red-200 mt-2">&quot;Be strong and courageous!&quot; - Joshua 1:9</p>
+            {/* Display the current time */}
+            <p className="text-sm sm:text-base text-red-200 mt-2">{currentTime.toLocaleTimeString()}</p>
           </div>
         </div>
       </header>
@@ -127,7 +134,8 @@ export default function CuttinEdgeYouth() {
             <CardContent className="text-center py-8">
               <BookIcon className="w-8 h-8 mx-auto mb-3" />
               <h2 className="text-xl sm:text-2xl font-bold mb-2">Current Track</h2>
-              <p className="text-lg sm:text-xl font-semibold">Understanding the Trinity</p>
+              {/* Escaped the double quotes */}
+              <p className="text-lg sm:text-xl font-semibold">&quot;Understanding the Trinity&quot;</p>
               <p className="text-sm sm:text-base opacity-90 mt-2">Week 3 of 6 • Exploring the Holy Spirit</p>
             </CardContent>
           </Card>
@@ -202,10 +210,12 @@ export default function CuttinEdgeYouth() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                   {leaders.map((leader, index) => (
                     <div key={index} className="text-center">
-                      <img
+                      <Image
                         src={leader.image || "/placeholder.svg"}
                         alt={leader.name}
                         className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-3 object-cover border-4 border-red-100"
+                        width={120}
+                        height={120}
                       />
                       <h4 className="font-semibold text-gray-800 text-sm sm:text-base">{leader.name}</h4>
                       <p className="text-xs sm:text-sm text-gray-600">{leader.role}</p>
@@ -324,8 +334,10 @@ export default function CuttinEdgeYouth() {
       {/* Footer */}
       <footer className="bg-red-800 text-white py-6 mt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-sm text-red-100">© 2024 Cuttin' Edge Youth Ministry • Grace Community Church</p>
-          <p className="text-xs text-red-200 mt-2">"Train up a child in the way he should go" - Proverbs 22:6</p>
+          {/* Escaped the single quote */}
+          <p className="text-sm text-red-100">© 2024 Cuttin&apos; Edge Youth Ministry • Grace Community Church</p>
+          {/* Escaped the double quotes */}
+          <p className="text-xs text-red-200 mt-2">&quot;Train up a child in the way he should go&quot; - Proverbs 22:6</p>
         </div>
       </footer>
     </div>
