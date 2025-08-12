@@ -116,11 +116,9 @@ export default function CuttinEdgeYouth() {
       <header className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white shadow-xl">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           <div className="text-center">
-            {/* Escaped the single quote */}
             <h1 className="text-3xl sm:text-5xl font-bold mb-2 tracking-tight">Cuttin&apos; Edge</h1>
             <p className="text-lg sm:text-xl text-red-100 font-medium">Youth Ministry</p>
-            {/* Using single quotes for the string to avoid the ESLint error */}
-            <p className="text-sm sm:text-base text-red-200 mt-2">'Be strong and courageous!' - Joshua 1:9</p>
+            <p className="text-sm sm:text-base text-red-200 mt-2">&apos;Be strong and courageous!&apos; - Joshua 1:9</p>
             {/* Display the current time */}
             <p className="text-sm sm:text-base text-red-200 mt-2">{currentTime.toLocaleTimeString()}</p>
           </div>
@@ -134,8 +132,7 @@ export default function CuttinEdgeYouth() {
             <CardContent className="text-center py-8">
               <BookIcon className="w-8 h-8 mx-auto mb-3" />
               <h2 className="text-xl sm:text-2xl font-bold mb-2">Current Track</h2>
-              {/* Using single quotes for the string to avoid the ESLint error */}
-              <p className="text-lg sm:text-xl font-semibold">'Understanding the Trinity'</p>
+              <p className="text-lg sm:text-xl font-semibold">&apos;Understanding the Trinity&apos;</p>
               <p className="text-sm sm:text-base opacity-90 mt-2">Week 3 of 6 • Exploring the Holy Spirit</p>
             </CardContent>
           </Card>
@@ -155,7 +152,7 @@ export default function CuttinEdgeYouth() {
               </CardHeader>
               <CardContent>
                 <blockquote className="text-base sm:text-lg text-gray-700 italic leading-relaxed mb-3">
-                  "{verseOfDay.verse}"
+                  &ldquo;{verseOfDay.verse}&rdquo;
                 </blockquote>
                 <cite className="text-sm sm:text-base font-semibold text-red-600">- {verseOfDay.reference}</cite>
               </CardContent>
@@ -334,10 +331,8 @@ export default function CuttinEdgeYouth() {
       {/* Footer */}
       <footer className="bg-red-800 text-white py-6 mt-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          {/* Escaped the single quote */}
           <p className="text-sm text-red-100">© 2024 Cuttin&apos; Edge Youth Ministry • Grace Community Church</p>
-          {/* Using single quotes for the string to avoid the ESLint error */}
-          <p className="text-xs text-red-200 mt-2">'Train up a child in the way he should go' - Proverbs 22:6</p>
+          <p className="text-xs text-red-200 mt-2">&apos;Train up a child in the way he should go&apos; - Proverbs 22:6</p>
         </div>
       </footer>
     </div>
