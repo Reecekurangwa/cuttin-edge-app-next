@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import TrackImg from './Current Track banner.png'
 
 export default function CuttinEdgeYouth() {
   // Use currentTime state to display the current time in the UI
@@ -128,8 +129,10 @@ export default function CuttinEdgeYouth() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Current Track Banner */}
         <div className="mb-8">
+          
           <Card className="bg-gradient-to-r from-red-500 to-red-600 text-white border-0 shadow-xl">
             <CardContent className="text-center py-8">
+              <Image src={TrackImg} alt="Current Track" className="w-full h-auto rounded-lg shadow-lg" />
               <BookIcon className="w-8 h-8 mx-auto mb-3" />
               <h2 className="text-xl sm:text-2xl font-bold mb-2">Current Track</h2>
               <p className="text-lg sm:text-xl font-semibold">&apos;Understanding the Trinity&apos;</p>
